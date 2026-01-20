@@ -47,6 +47,10 @@ function fillView(data, prefix, slashMode=false){
     if(data.globe!=undefined){
         text+=` This trip I covered approximately <span class="ui orange text">${Math.round(totalDistance(data))}</span>km.`
     }
+    if(data.note!=undefined){
+        text+=data.note;
+    }
+    
     if(data.page!=undefined){
         text+=` <i class="lightbulb icon"></i>This journey has a dedicated page: <a href="${data.page}">${data.linkText}</a>`
     }
@@ -99,14 +103,17 @@ function totalDistance(trip){
     if(trip.globe==undefined){
         return 0;
     }
+
+    let startPoint=trip.style==STYLE_SG?myLocSg:myLoc;
+
     if(typeof trip.globe[0]=='number'){
-        return 2*dist(myLoc,trip.globe);
+        return 2*dist(startPoint,trip.globe);
     }
-    var ans=dist(myLoc,trip.globe[0])
+    var ans=dist(startPoint,trip.globe[0])
     for(var i=0;i<trip.globe.length-1;i++){
         ans+=dist(trip.globe[i],trip.globe[i+1]);
     }
-    ans+=dist(trip.globe[trip.globe.length-1],myLoc);
+    ans+=dist(trip.globe[trip.globe.length-1],startPoint);
     return ans;
 }
 

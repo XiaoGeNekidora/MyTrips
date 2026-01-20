@@ -2,7 +2,9 @@ var STYLE_NJ="color: black; background-color: palegreen;"
 var STYLE_NEAR="color: black; background-color: aqua;"
 var STYLE_FAR="color: white; background-color: orangered;"
 var STYLE_ABROAD="color: white; background-color: purple;"
+var STYLE_SG="color: white; background-color: teal;"
 var myLoc=[32.063603,118.744264]
+var myLocSg=[1.2908979921032653, 103.78137076479398]
 
 /*
 {
@@ -32,13 +34,57 @@ var myLoc=[32.063603,118.744264]
     //You can find such information on https://map.google.com by right-clicking
     //Or https://api.map.baidu.com/lbsapi/getpoint/index.html Note: Baidu returns [long,lat]. Please be careful!!
     globe:[[32.10040233513357, 118.62085518551899],[32.09799052838991, 118.59370303800573]]
+    //note
+    note:"这是一段提示，会被显示出来。",
     //a link
     page:"https://blog.hellholestudios.top/archives/1332",
     //link's text
-    linkText:"Diary (Chinese)"
+    linkText:"Diary (Chinese)",
 },
 */
 var data=[
+    {
+        content:"Kampong Glam",
+        start:"2026-1-20",
+        style:STYLE_SG,
+        tag:["tr:m","w:Myself"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[1.302538296830042, 103.85902277128483],
+    },
+    {
+        content:"新加坡植物园",
+        start:"2026-1-17",
+        style:STYLE_SG,
+        tag:["tr:b","tr:m","w:XLH"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[
+            1.3140048668177755, 103.8157863539976
+        ],
+    },
+    {
+        content:"NUS交换",
+        start:"2026-1-11",
+        end:"2026-1-12",
+        style:STYLE_ABROAD,
+        tag:["tr:p","tr:b","tr:m","w:XLH"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[
+            myLocSg
+        ],
+        note:"其实交换从1月11号开始到5月。这两天算是探索校园单独列出来。之后将会按照SG格式记录。"
+    },
     {
         content:"止马岭",
         start:"2025-11-16",
