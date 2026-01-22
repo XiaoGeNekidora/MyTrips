@@ -44,6 +44,18 @@ var myLocSg=[1.2908979921032653, 103.78137076479398]
 */
 var data=[
     {
+        content:"St Andrew's Cathedral & National Gallary SG",
+        start:"2026-1-21",
+        style:STYLE_SG,
+        tag:["tr:m","w:Myself"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[[1.3026101288298282, 103.83471195778557],[1.2925011431791191, 103.85228570386553],[1.2902195733991095, 103.8514767329431]],
+    },
+    {
         content:"Kampong Glam",
         start:"2026-1-20",
         style:STYLE_SG,
