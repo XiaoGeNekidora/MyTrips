@@ -151,7 +151,9 @@
         var items=new vis.DataSet(data)
 
         var options={
-            zoomMin:1000*60*60*24*7
+            zoomMin:1000*60*60*24*7,
+            start: new Date().setMonth(new Date().getMonth()-3),
+            end: new Date().setMonth(new Date().getMonth()+1)
         }
         // Create a Timeline
         var timeline = new vis.Timeline(target, items, options);
