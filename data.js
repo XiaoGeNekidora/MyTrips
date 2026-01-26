@@ -44,6 +44,32 @@ var myLocSg=[1.2908979921032653, 103.78137076479398]
 */
 var data=[
     {
+        content:"Gardens by the Bay",
+        start:"2026-1-25",
+        style:STYLE_SG,
+        tag:["tr:m","tr:b","w:XLH"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[1.2819287989281098, 103.86371448122449],
+    },
+    {
+        content:"Punggol",
+        start:"2026-1-24",
+        style:STYLE_SG,
+        tag:["tr:m","w:Myself"],
+        loc:[{
+            name:"新加坡",
+            altname:"Singapore"
+        }
+        ],
+        globe:[[1.414887701017673, 103.91021891699015],
+        [1.4091406598819798, 103.922954237403],
+        [1.3987301833838168, 103.93040303251867],[1.396710067865081, 103.91744906560146],[1.4112985059439946, 103.90397778513108]],
+    },
+    {
         content:"St Andrew's Cathedral & National Gallary SG",
         start:"2026-1-21",
         style:STYLE_SG,
